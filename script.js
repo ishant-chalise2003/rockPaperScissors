@@ -3,14 +3,13 @@ playerScore = 0
 
 noOfRounds = prompt('How many round do you want to play?')
 
-function userEntry(){ // Asking for user choice
+userChoice = int(function userEntry(){ // Asking for user choice
     return (prompt('Press \n "1" for Rock\n "2" for Paper \n "3" for Scissors'))
-}
+})
 
-function computerEntry(){
+computerChoice = int(function computerEntry(){
     return Math.floor((Math.random()*10)%3)
-
-}
+})
 
 function gamePlay(){
     if (userChoice == computerChoice){
@@ -40,11 +39,7 @@ function result (playerScore, compScore){
 
 
 for (i = 1; i <= noOfRounds; i++){    // From round 1 to n
-    userChoice = userEntry()
-    computerChoice = computerEntry()
     gamePlay()
-    
-    
 }
 
 
